@@ -1,0 +1,14 @@
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/bin/Debug/net9.0/PV
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/bin/Debug/net9.0/PV.deps.json
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/bin/Debug/net9.0/PV.runtimeconfig.json
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/bin/Debug/net9.0/PV.dll
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/bin/Debug/net9.0/PV.pdb
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/PV.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/PV.AssemblyInfoInputs.cache
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/PV.AssemblyInfo.cs
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/PV.csproj.CoreCompileInputs.cache
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/PV.dll
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/refint/PV.dll
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/PV.pdb
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/PV.genruntimeconfig.cache
+/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/Debug/net9.0/ref/PV.dll
