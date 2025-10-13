@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/PV.csproj": {}
+    "/Users/mhille/_Development/C#/macrpmedia/PV-Anton/PV.csproj": {}
   },
   "projects": {
-    "/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/PV.csproj": {
+    "/Users/mhille/_Development/C#/macrpmedia/PV-Anton/PV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/PV.csproj",
+        "projectUniqueName": "/Users/mhille/_Development/C#/macrpmedia/PV-Anton/PV.csproj",
         "projectName": "PV",
-        "projectPath": "/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/PV.csproj",
+        "projectPath": "/Users/mhille/_Development/C#/macrpmedia/PV-Anton/PV.csproj",
         "packagesPath": "/Users/mhille/.nuget/packages/",
-        "outputPath": "/Users/mhille/_Development/C#/macrpmedia/MM_CS_101/PV/obj/",
+        "outputPath": "/Users/mhille/_Development/C#/macrpmedia/PV-Anton/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mhille/.nuget/NuGet/NuGet.Config"
