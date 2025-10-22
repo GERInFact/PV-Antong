@@ -1,38 +1,85 @@
-﻿using PV.Exercises.Library;
+﻿Console.WriteLine("Hello, World!");
+var ai = new TerroristAI();
 
-public class Program
+while(true)
+    ai.Act();
+
+
+public interface IState
 {
-    /// <summary>
-    /// The entry point of the application. Initializes and manages library operations such as adding books,
-    /// renting books, and returning books while interacting with library members.
-    /// </summary>
-    /// <param name="args">Command-line arguments provided to the application.</param>
-    public static void Main(string[] args)
+    void Tick();
+}
+
+class TerroristAI : IStateContext
+{
+    private IState _state;
+
+    public TerroristAI() => this._state = new SeekState(this) {DetectionRadius = 12.2f};
+    public void SetState(IState state) => this._state = state;
+    
+    public void Act() => this._state.Tick();
+}
+
+public interface IStateContext
+{
+    void SetState(IState state);
+}
+
+public class SeekState : IState
+{
+    public float DetectionRadius { get; set; }
+
+    private readonly IStateContext _context;
+    public SeekState(IStateContext context) => _context = context;
+
+    public void Tick()
     {
-        var thalia = new Library();
-        var harryPotter = new EBook
-        {
-            Author = "J.K. Rowling", Title = "Harry Potter", FileSizeInMB = 100,
-            Description = "Goblet of Fire is delicious"
-        };
-        
-        var christmasCarol = new HardcoverBook()
-        {
-            Author = "J.K. Rowling", Title = "Christmas Carol", PrintDate = new DateTime(1670, 12, 24),
-            Description = "Very nice christmas story"
-        };
-        
-        thalia.PopulateLibrary(harryPotter, christmasCarol);
-        
-        
-        var anton = new Member { Id = Guid.NewGuid(), Name = "Anton Fleig" };
-        
-        thalia.Rent(anton, harryPotter);
+        Console.WriteLine($"Seeking for stuff... Nothing detected yet in ...{this.DetectionRadius}m");
+        this.TryTriggerStateChange();
+    }
 
-        Console.WriteLine(harryPotter.EndDate);
-        
-        thalia.Return(anton, harryPotter);
+    private void TryTriggerStateChange()
+    {
+        if (Console.ReadLine() == "a")
+            this._context.SetState(new AttackState(this._context) {Attacks = 3});
+        else if (Console.ReadLine() == "p")
+            this._context.SetState(new PatrolState(this._context));
+        else
+            Console.WriteLine("Nothing to trigger....");
+    }
+}
 
-        Console.WriteLine(harryPotter.EndDate);
+public class AttackState : IState
+{
+    public int Attacks { get; set; }
+    private readonly IStateContext _context;
+    public AttackState(IStateContext context) => _context = context;
+
+    public void Tick()
+    {
+        if (this.Attacks <= 0)
+        {
+            this._context.SetState(new SeekState(this._context));
+            return;
+        }
+
+        Console.WriteLine($"Attacking...{this.Attacks--}");
+    }
+}
+
+public class PatrolState : IState
+{
+    private readonly IStateContext context;
+    public PatrolState(IStateContext context) => this.context = context;
+    public void Tick()
+    {
+        Console.WriteLine("Patrolling...");
+        this.TryChangeTransition();
+    }
+
+    private void TryChangeTransition()
+    {
+        if(Console.ReadLine() == "s")
+            this.context.SetState(new SeekState(this.context) {DetectionRadius = 30.2f});
     }
 }
